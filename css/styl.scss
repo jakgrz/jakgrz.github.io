@@ -1,0 +1,85 @@
+@import '_media.scss';
+
+$cobalt: #22333b;
+$platinum: #eaeaea;
+$gray: #948d8d;
+$red: #8c001a;
+$orang: #a3320b;
+
+body {
+    min-height: 100vh;
+    background: $cobalt;
+    color: $platinum;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.no-select {
+    user-select: none;
+}
+
+body {
+    margin: 0 auto;
+    width: 50%;
+}
+
+@mixin imag() {
+    max-width: 50%;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo {
+    @include imag();
+
+    &--photo {
+        @extend .logo;
+        max-width: 100%;
+        width: 1000px;
+    }
+}
+
+ul,
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0.5em;
+}
+
+a {
+    color: $orang;
+    text-decoration: none;
+
+    visited {
+        color: $red;
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 15px 0;
+}
+
+h2 {
+    padding-top: 20px;
+    border-top: solid 2px $platinum;
+
+    first-of-type {
+        border-top: none;
+    }
+}
+
+pre {
+    color: $gray;
+    page-break-inside: avoid;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow-y: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
